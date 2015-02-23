@@ -1,0 +1,6 @@
+CodeStyle for R-TYPE on project "Programació"
+
+Filename: PascalCase
+Variables: SnakeCase with Hungarian Notation 
+Class Names: PascalCase
+Method Names: camelCase
