@@ -1,6 +1,8 @@
 #ifndef __Point2D_H__
 #define __Point2D_H__
 
+#include <stdio.h>
+
 class Point2D
 {
 public:
@@ -78,8 +80,7 @@ public:
 		
 		Point2D tmp;
 		printf("%d %d\n", a.x, a.y);
-		printf("%d\n", a);
-
+		
 		tmp.x = a.x;
 		tmp.y = a.y;
 		return (*this);

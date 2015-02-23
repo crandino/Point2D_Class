@@ -13,26 +13,7 @@ int main(int argc, char** argv) {
 	p2.x = 3;
 	p2.y = 3;
 
-	p1 += p2;
-
-	cout << p1.x << " " << p1.y << endl;
-	cout << p2.x << " " << p2.y << endl;
-
-	if (p1 != p2) {
-		cout << "They are not equal!" << endl;
-	}
-	else {
-		cout << "They are equal!" << endl;
-	}
-
-	p1 = p2; 
-
-	if (p1 != p2) {
-		cout << "They are not equal!" << endl;
-	}
-	else {
-		cout << "They are equal!" << endl;
-	}
+	p1 = p2;
 
 	system("pause");
 
