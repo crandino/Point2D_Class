@@ -1,5 +1,6 @@
 #include <iostream>
 #include "Point2d.h"
+#include "String.h"
 
 using namespace std;
 
@@ -13,7 +14,8 @@ int main(int argc, char** argv) {
 	p2.x = 3;
 	p2.y = 3;
 
-	p1 = p2;
+	String a;
+	String b("Pepito");
 
 	system("pause");
 

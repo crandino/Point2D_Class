@@ -44,12 +44,10 @@ public:
 		return (*this);
 	}
 
-	/*void operator+= (const Point2D& a) {
-
-		x += a.x;
-		y += a.y;
-
-		}*/
+	//void operator+= (const Point2D& a) {
+	//	x += a.x;
+	//	y += a.y;
+	//}
 
 	Point2D operator- (const Point2D& a) const {
 
