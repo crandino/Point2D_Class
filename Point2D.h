@@ -27,7 +27,7 @@ public:
 		y = -y;
 	}
 
-	Point2D operator+ (const Point2D& a) const {  // La x,y del objecte no es modifiquen.
+	Point2D Point2D::operator+ (const Point2D &a) const {  // La x,y del objecte no es modifiquen.
 
 		Point2D tmp;
 
@@ -37,19 +37,14 @@ public:
 		return tmp;
 	}
 
-	Point2D operator+= (const Point2D& a) {
+	const Point2D& Point2D::operator+= (const Point2D& a) {
 
 		x += a.x;
 		y += a.y;
 		return (*this);
 	}
 
-	//void operator+= (const Point2D& a) {
-	//	x += a.x;
-	//	y += a.y;
-	//}
-
-	Point2D operator- (const Point2D& a) const {
+	Point2D Point2D::operator- (const Point2D& a) const {
 
 		Point2D tmp;
 
@@ -59,29 +54,24 @@ public:
 		return tmp;
 	}
 
-	Point2D operator-= (const Point2D& a) {
+	const Point2D& Point2D::operator-= (const Point2D& a) {
 
 		x -= a.x;
 		y -= a.y;
 		return (*this);
 	}
 
-	bool operator== (const Point2D& a) const {
+	bool Point2D::operator== (const Point2D& a) const {
 		return x == a.x && y == a.y;
 	}
 
-	bool operator!= (const Point2D& a) const {
+	bool Point2D::operator!= (const Point2D& a) const {
 		return x != a.x || y != a.y;
 	}
 
-	Point2D operator= (const Point2D& a) const {
-		
-		Point2D tmp;
-		printf("%d %d\n", a.x, a.y);
-		
-		tmp.x = a.x;
-		tmp.y = a.y;
-		return (*this);
+	void print_info() const {
+		printf("Componente x: %.1f\n", x);
+		printf("Componente y: %.1f\n", y);
 	}
 
 public:

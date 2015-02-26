@@ -1,6 +1,8 @@
 #ifndef __String_H__
 #define __String_H__
 
+#include <wtypes.h>
+
 class String {
 
 private:
@@ -24,6 +26,15 @@ public:
 	/*String(const &String) {
 
 	}*/
+
+	String(LPCSTR format, ...)  // Ricard pedia String(const char *format) {}
+	{
+		str = new char[10];
+		va_list args;
+		va_start(args, format);
+		length = vsnprintf_s(str, _countof(str), _TRUNCATE, format, args);
+		printf("%d", length);
+	}
 
 	~String() {
 		delete[] str; // Es necessari perquè és memòria dinàmica.

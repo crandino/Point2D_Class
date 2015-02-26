@@ -16,7 +16,7 @@ int main(int argc, char** argv) {
 
 	String a;
 	String b("Pepito");
+	//String("%s", "Hola");
 
 	system("pause");
-
 }
