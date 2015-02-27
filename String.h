@@ -23,27 +23,24 @@ public:
 		strcpy_s(str,length,_str);
 	}
 
-	/*String(const &String) {
-
-	}*/
-
-	String(LPCSTR format, ...)  // Ricard pedia String(const char *format) {}
-	{
-		str = new char[10];
-		va_list args;
-		va_start(args, format);
-		length = vsnprintf_s(str, _countof(str), _TRUNCATE, format, args);
-		printf("%d", length);
+	String(const String &a) {
+		
 	}
 
+	//String(LPCSTR format, ...)  // Ricard pedia String(const char *format) {}
+	//{
+	//	str = new char[10];
+	//	va_list args;
+	//	va_start(args, format);
+	//	length = vsnprintf_s(str, _countof(str), _TRUNCATE, format, args);
+	//	printf("%d", length);
+	//}
+
 	~String() {
-		delete[] str; // Es necessari perquè és memòria dinàmica.
+		delete[] str; // És necessari perquè és memòria dinàmica.
 				      // Delete[] per borrar new[].
 	}
 
-	/*int len(_str) const {
-		return strlen_s(_str);
-	}*/
 };
 
 #endif // !__String_H__

@@ -2,6 +2,7 @@
 #define __Point2D_H__
 
 #include <stdio.h>
+#include <math.h>
 
 class Point2D
 {
@@ -67,6 +68,14 @@ public:
 
 	bool Point2D::operator!= (const Point2D& a) const {
 		return x != a.x || y != a.y;
+	}
+
+	float distanceTo(const Point2D& a) const {
+		
+		float distance;
+		distance = sqrt(pow(x - a.x,2) + pow(y - a.y,2));
+
+		return distance;
 	}
 
 	void print_info() const {

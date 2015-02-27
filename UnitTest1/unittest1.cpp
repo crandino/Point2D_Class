@@ -10,36 +10,37 @@ namespace UnitTest1
 	{
 	public:
 		
-		TEST_METHOD(TestPoint2d)
+		TEST_METHOD(setZero)
 		{
-			// TODO: Agregar aquí el código de la prueba
-			Point2D p1,p2;
-			p2.x = 5;
-			p2.y = -2;
+			// Add here test code...
 
+			Point2D p1;
 			p1.setZero();
-			Assert::IsTrue(p1.isBothZero());
-			Assert::IsFalse(p1 == p2);
+
+			Assert::IsTrue(p1.x == 0);
+			Assert::IsTrue(p1.y == 0);
 
 		}
-		//TEST_METHOD(TestPoint2dAdd)
-		//{
-		//	// TODO: Agregar aquí el código de la prueba
-		//	Point2d point, p2, p3;
+		TEST_METHOD(isBothZero)
+		{
+			// Add here test code...
 
-		//	p2.x = 1.0f;
-		//	p2.y = 3.0f;
+			Point2D p1;
+			p1.setZero();
 
-		//	p3.x = 1.0f;
-		//	p3.y = 3.0f;
+			Assert::IsTrue(p1.isBothZero());
+		}
+		TEST_METHOD(invert)
+		{
+			// Add here test code...
 
-		//	point = p2 + p3;
-		//	Assert::AreEqual(point.x, 3.0f);
-		//	Assert::AreEqual(point.y, 6.0f);
+			Point2D p1;
+			p1.x = 2;
+			p1.y = 3;
+			p1.invert();
 
-
-		//	Assert::IsTrue(point.isBothZero();
-
-		//}
+			Assert::IsTrue(p1.x == -2);
+			Assert::IsTrue(p1.y == -3);
+		}
 	};
 }
