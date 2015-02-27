@@ -16,7 +16,7 @@ int main(int argc, char** argv) {
 
 	String a;
 	String b("Pepito");
-	//String("%s", "Hola");
+	String c = b;
 
 	float distance = p1.distanceTo(p2);
 	printf("%f\n", distance);
